@@ -1,0 +1,5 @@
+interval: 60
+duration: 1
+video_path: /var/video/
+video_file_suffix: vid
+
