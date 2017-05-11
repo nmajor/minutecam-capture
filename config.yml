@@ -1,5 +1,5 @@
-interval: 60
+interval: 5
 duration: 1
-video_path: /var/video/
+video_path: /home/pi/capture/video/
 video_file_suffix: vid
-
+brightness: 50

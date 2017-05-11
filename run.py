@@ -1,10 +1,13 @@
-from lib.capture import Capture
+import yaml
 from time import sleep
-import picamera
+from lib.camera import CameraFactory
+from lib.capture import Capture
 
-camera = picamera.PiCamera()
-camera.start_recording('video.h264')
-sleep(5)
-camera.stop_recording()
+config = yaml.safe_load(open('config.yml'))
+print config
+camera = CameraFactory(config).get_camera()
+capture = Capture(camera, config)
 
-
+capture.start()
+sleep(20)
+capture.stop()
